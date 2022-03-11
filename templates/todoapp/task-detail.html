@@ -1,0 +1,14 @@
+{% extends '_base.html'%}
+
+{% block content %}
+
+<h2> {{task.title}} </h2>
+<h2>Creator: {{task.creator}} </h2>
+<h2>Assigned to {{task.assignee}} </h2>
+<p> task.description </p>
+<a href="{% url 'task_update' task.pk %}"> > Update task  </a>
+<a href="{% url 'task_delete' task.pk %}"> > Delete task  </a>
+
+
+
+{% endblock content %}

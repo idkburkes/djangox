@@ -1,0 +1,16 @@
+{% extends '_base.html' %}
+
+{% load crispy_forms_tags %}
+
+
+{% block content %}
+
+<h1>Delete task</h1>
+<form action="" method="POST">
+  {% csrf_token %}
+  <p> Do you really want to delete this task "{{ task.title }}"? </p>
+  <input type="submit" value="SAVE">
+</form>
+  
+
+{% endblock content %}
